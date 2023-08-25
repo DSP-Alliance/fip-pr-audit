@@ -323,18 +323,18 @@ def get_github_pr_details(owner, repo, access_token):
 
 
 # Set your GitHub personal access token, repo owner, and repo name
-token = "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"
+token = input("Enter your GitHub personal access token: ")
 owner = "filecoin-project"
 repo = "FIPs"
 
 reviewed_prs = get_github_pr_details(owner, repo, token)
 
 df = pd.DataFrame(reviewed_prs)
-df.to_excel("/home/pluto/reviewed_prs1.xlsx", index=False)
+df.to_excel("./reviewed_prs.xlsx", index=False)
 
 exit()
 
-repo_path = "/home/pluto/FIPs"
+repo_path = "./FIPs"
 file_path = "FIPS/fip-0058.md"
 commits = get_git_log_for_file(repo_path, file_path)
 
