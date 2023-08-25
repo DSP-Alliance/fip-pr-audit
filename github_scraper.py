@@ -327,10 +327,10 @@ token = input("Enter your GitHub personal access token: ")
 owner = "filecoin-project"
 repo = "FIPs"
 
-reviewed_prs = get_github_pr_details(owner, repo, token)
+pr_data = get_github_pr_details(owner, repo, token)
 
-df = pd.DataFrame(reviewed_prs)
-df.to_excel("./reviewed_prs.xlsx", index=False)
+df = pd.DataFrame(pr_data)
+df.to_excel("./prs.xlsx", index=False)
 
 exit()
 
