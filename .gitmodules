@@ -1,0 +1,3 @@
+[submodule "FIPs"]
+	path = FIPs
+	url = https://github.com/filecoin-project/FIPs.git
